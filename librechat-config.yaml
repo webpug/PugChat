@@ -1,12 +1,21 @@
-version: 1.1.6
 
+# Configuration version (required)
+version: 1.2.1
+
+# Cache settings: Set to true to enable caching
 cache: true
 
-registration:
-  socialLogins: ["discord", "facebook", "github", "google", "openid"]
-
+# Custom interface configuration
 interface:
   endpointsMenu: true
+  modelSelect: true
+  parameters: true
+  sidePanel: true
+  presets: true
+  prompts: true
+  bookmarks: true
+  multiConvo: true
+  agents: true
 
 speech:
   tts:
