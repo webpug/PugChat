@@ -16,6 +16,7 @@ interface:
   bookmarks: true
   multiConvo: true
   agents: true
+  speechTab: true
 
 speech:
   speechTab:
