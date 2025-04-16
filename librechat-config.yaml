@@ -267,6 +267,7 @@ endpoints:
           "llama-3.2-3b-instruct",
           "llama-3.2-90b-vision-instruct",
           "llama-3.3-70b-instruct",
+          "llama-4-maverick-17b-instruct",
           "llama-guard-2-8b",
           "llama2-13b-chat-v1",
           "llama2-70b-chat-v1",
@@ -415,7 +416,7 @@ endpoints:
     # https://huggingface.co/settings/tokens
     - name: 'HuggingFace'
       apiKey: '${HUGGINGFACE_TOKEN}'
-      baseURL: 'https://api-inference.huggingface.co/v1'
+      baseURL: 'https://router.huggingface.co/hf-inference/models/'
       models:
         default: [
           "codellama/CodeLlama-34b-Instruct-hf",
