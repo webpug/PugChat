@@ -424,6 +424,8 @@ endpoints:
           "HuggingFaceH4/starchat2-15b-v0.1",
           "HuggingFaceH4/zephyr-7b-beta",
           "meta-llama/Meta-Llama-3-8B-Instruct",
+          "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+          "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
           "microsoft/Phi-3-mini-4k-instruct",
           "mistralai/Mistral-7B-Instruct-v0.1",
           "mistralai/Mistral-7B-Instruct-v0.2",
@@ -455,4 +457,25 @@ endpoints:
       forcePrompt: false
       dropParams: ["stop", "frequency_penalty"]
       modelDisplayLabel: "Perplexity"
+    - name: "Grok"
+      apiKey: "${GROK_API_KEY}"
+      baseURL: "https://api.x.ai/v1"
+      models:
+        default: [
+          "grok-3-latest",
+          "grok-3-mini-beta",
+          "grok-3-fast-beta",
+          "grok-2-1212",
+          "grok-2-vision-1212",
+          "grok-2-image-1212",
+          "grok-beta",
+          "grok-vision-beta"
+        ]
+        fetch: false
+      titleConvo: true
+      titleModel: "grok-3-latest"
+      summarize: false
+      summaryModel: "grok-3-latest"
+      modelDisplayLabel: "Grok"
+      iconURL: "https://raw.githubusercontent.com/webpug/PugChat/main/icons/xAIlogo.png"
 
