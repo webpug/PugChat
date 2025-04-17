@@ -343,7 +343,7 @@ endpoints:
     # https://huggingface.co/settings/tokens
     - name: 'HuggingFace'
       apiKey: '${HUGGINGFACE_TOKEN}'
-      baseURL: 'https://api-inference.huggingface.co/v1'
+      baseURL: 'https://api-inference.huggingface.co'
       models:
         default: [
           "codellama/CodeLlama-34b-Instruct-hf",
@@ -360,14 +360,15 @@ endpoints:
           "mistralai/Mixtral-8x7B-Instruct-v0.1",
           "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
           ]
-        fetch: false
+        fetch: true
       titleConvo: true
       titleModel: "microsoft/Phi-3-mini-4k-instruct"
-      parameters: 
-        defaults:
-          temperature: 0.9
-          max_new_tokens: 512
+      # parameters: 
+      #   defaults:
+      #     temperature: 0.9
+      #     max_new_tokens: 512
       dropParams: ["top_p"]
+      modelDisplayLabel: "HuggingFace"
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
