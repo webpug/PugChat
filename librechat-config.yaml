@@ -339,36 +339,36 @@ endpoints:
       summaryModel: "deepseek-chat"
       modelDisplayLabel: "DeepSeek"
 
-    # HuggingFace
+    # HuggingFace - need to create our own inference endpoint, this just isnt working
     # https://huggingface.co/settings/tokens
-    - name: 'HuggingFace'
-      apiKey: '${HUGGINGFACE_TOKEN}'
-      baseURL: 'https://api-inference.huggingface.co/v1'
-      models:
-        default: [
-          "codellama/CodeLlama-34b-Instruct-hf",
-          "google/gemma-1.1-2b-it",
-          "google/gemma-1.1-7b-it",
-          "HuggingFaceH4/starchat2-15b-v0.1",
-          "HuggingFaceH4/zephyr-7b-beta",
-          "meta-llama/Meta-Llama-3-8B-Instruct",
-          "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-          "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
-          "microsoft/Phi-3-mini-4k-instruct",
-          "mistralai/Mistral-7B-Instruct-v0.1",
-          "mistralai/Mistral-7B-Instruct-v0.2",
-          "mistralai/Mixtral-8x7B-Instruct-v0.1",
-          "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
-          ]
-        fetch: true
-      titleConvo: true
-      titleModel: "microsoft/Phi-3-mini-4k-instruct"
-      # parameters: 
-      #   defaults:
-      #     temperature: 0.9
-      #     max_new_tokens: 512
-      dropParams: ["top_p"]
-      modelDisplayLabel: "HuggingFace"
+    # - name: 'HuggingFace'
+    #   apiKey: '${HUGGINGFACE_TOKEN}'
+    #   baseURL: 'https://api-inference.huggingface.co/v1'
+    #   models:
+    #     default: [
+    #       "codellama/CodeLlama-34b-Instruct-hf",
+    #       "google/gemma-1.1-2b-it",
+    #       "google/gemma-1.1-7b-it",
+    #       "HuggingFaceH4/starchat2-15b-v0.1",
+    #       "HuggingFaceH4/zephyr-7b-beta",
+    #       "meta-llama/Meta-Llama-3-8B-Instruct",
+    #       "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+    #       "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+    #       "microsoft/Phi-3-mini-4k-instruct",
+    #       "mistralai/Mistral-7B-Instruct-v0.1",
+    #       "mistralai/Mistral-7B-Instruct-v0.2",
+    #       "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    #       "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+    #       ]
+    #     fetch: true
+    #   titleConvo: true
+    #   titleModel: "microsoft/Phi-3-mini-4k-instruct"
+    #   # parameters: 
+    #   #   defaults:
+    #   #     temperature: 0.9
+    #   #     max_new_tokens: 512
+    #   dropParams: ["top_p"]
+    #   modelDisplayLabel: "HuggingFace"
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
