@@ -440,8 +440,7 @@ endpoints:
       parameters: 
         defaults:
           temperature: 0.9
-          max_new_tokens: 512      
-      dropParams: ["top_p"]
+          max_new_tokens: 512
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
