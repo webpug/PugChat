@@ -267,7 +267,8 @@ endpoints:
           "llama-3.2-3b-instruct",
           "llama-3.2-90b-vision-instruct",
           "llama-3.3-70b-instruct",
-          "llama-4-maverick-17b-instruct",
+          "Llama-4-Scout-17B-16E-Instruct (deepinfra)",
+          "Llama-4-Maverick-17B-128E-Instruct-FP8 (deepinfra)",
           "llama-guard-2-8b",
           "llama2-13b-chat-v1",
           "llama2-70b-chat-v1",
@@ -416,7 +417,7 @@ endpoints:
     # https://huggingface.co/settings/tokens
     - name: 'HuggingFace'
       apiKey: '${HUGGINGFACE_TOKEN}'
-      baseURL: 'https://router.huggingface.co/hf-inference/models/'
+      baseURL: 'https://api-inference.huggingface.co'
       models:
         default: [
           "codellama/CodeLlama-34b-Instruct-hf",
