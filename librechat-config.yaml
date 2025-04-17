@@ -444,6 +444,7 @@ endpoints:
           temperature: 0.9
           max_new_tokens: 512
       dropParams: []  # Don't drop any parameters
+      directEndpoint: true
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
