@@ -267,8 +267,10 @@ endpoints:
           "llama-3.2-3b-instruct",
           "llama-3.2-90b-vision-instruct",
           "llama-3.3-70b-instruct",
-          "Llama-4-Scout-17B-16E-Instruct (deepinfra)",
-          "Llama-4-Maverick-17B-128E-Instruct-FP8 (deepinfra)",
+          "llama-4-scout-intruct",
+          "llama-4-scout",
+          "llama-4-maverick-instruct",
+          "llama-4-maverick",
           "llama-guard-2-8b",
           "llama2-13b-chat-v1",
           "llama2-70b-chat-v1",
@@ -434,13 +436,14 @@ endpoints:
           "mistralai/Mixtral-8x7B-Instruct-v0.1",
           "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
           ]
-        fetch: true
+        fetch: false
       titleConvo: true
-      titleModel: "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO"
+      titleModel: "microsoft/Phi-3-mini-4k-instruct"
       parameters: 
         defaults:
           temperature: 0.9
           max_new_tokens: 512
+      dropParams: []  # Don't drop any parameters
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
