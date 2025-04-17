@@ -419,7 +419,7 @@ endpoints:
     # https://huggingface.co/settings/tokens
     - name: 'HuggingFace'
       apiKey: '${HUGGINGFACE_TOKEN}'
-      baseURL: 'https://api-inference.huggingface.co'
+      baseURL: 'https://api-inference.huggingface.co/models'
       models:
         default: [
           "codellama/CodeLlama-34b-Instruct-hf",
