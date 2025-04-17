@@ -437,7 +437,11 @@ endpoints:
         fetch: true
       titleConvo: true
       titleModel: "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO"
-      dropParams: ["top_p","temperature"]
+      parameters: 
+        defaults:
+          temperature: 0.9
+          max_new_tokens: 512      
+      dropParams: ["top_p"]
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
