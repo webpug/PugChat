@@ -445,6 +445,9 @@ endpoints:
           max_new_tokens: 512
       dropParams: []  # Don't drop any parameters
       directEndpoint: true
+      forcePrompt: true
+      addParams:
+        inputs: ""
 
     # Preplexity
     # Model list: https://docs.perplexity.ai/docs/model-cards
