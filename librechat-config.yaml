@@ -45,6 +45,19 @@ speech:
       apiKey: '${STT_API_KEY}'
       model: 'whisper-1'
 
+mcpServers:
+  SequentialThinking:
+    type: stdio
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-sequential-thinking"
+    timeout: 30000
+    initTimeout: 10000
+    env:
+      NODE_ENV: "production"
+    stderr: inherit
+
 endpoints:
   agents:
     recursionLimit: 50
