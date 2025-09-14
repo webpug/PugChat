@@ -58,6 +58,13 @@ mcpServers:
       NODE_ENV: "production"
     stderr: inherit
 
+# Add this to your librechat.yaml
+ocr:
+  strategy: "mistral_ocr"  # or "azure_mistral_ocr" or "vertexai_mistral_ocr"
+  apiKey: "${OCR_API_KEY}"
+  baseURL: "${OCR_BASEURL}"
+  mistralModel: "mistral-ocr-latest"  # optional, this is the default
+
 endpoints:
   agents:
     recursionLimit: 50
