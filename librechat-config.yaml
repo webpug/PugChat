@@ -73,6 +73,21 @@ endpoints:
     # (optional) Agent Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
     # capabilities: ["execute_code", "file_search", "actions", "tools"]
   custom:
+    - name: 'huggingface'
+      apiKey: '${HUGGINGFACE_TOKEN}'
+      baseURL: 'https://router.huggingface.co/v1/'
+      models: # https://huggingface.co/models
+        default:
+          - 'mistralai/Mixtral-8x7B-Instruct-v0.1'
+          - 'zai-org/GLM-5'
+          - 'moonshotai/Kimi-K2.5'
+          - 'MiniMaxAI/MiniMax-M2.5'
+          - 'Qwen/QwQ-32B'
+          - 'openai/gpt-oss-120b'
+        fetch: false
+      titleConvo: true
+      titleModel: 'moonshotai/Kimi-K2.5'
+      modelDisplayLabel: 'HuggingFace'
     # APIpie
     # https://apipie.ai/dashboard/
     # Script to fetch models: https://github.com/LibreChat-AI/librechat-config-yaml/blob/main/scripts/apipie.py
