@@ -63,7 +63,7 @@ endpoints:
     # capabilities: ["execute_code", "file_search", "actions", "tools"]
   custom:
     - name: 'huggingface'
-      apiKey: '${HUGGINGFACE_TOKEN}'
+      apiKey: '${HUGGINGFACE_API_KEY}'
       baseURL: 'https://router.huggingface.co/v1/'
       models: # https://huggingface.co/models
         default:
@@ -104,9 +104,8 @@ endpoints:
       baseURL: "https://api.deepseek.com"
       models:
         default: [
-          "deepseek-chat",
-          "deepseek-coder",
-          "deepseek-reasoner"
+          "deepseek-v4-flash",
+          "deepseek-v4-pro"
           ]
         fetch: false
       titleConvo: true
@@ -140,16 +139,14 @@ endpoints:
       baseURL: "https://api.x.ai/v1"
       models:
         default: [
-          "grok-4-1-fast-reasoning",
-          "grok-4-1-fast-non-reasoning",
-          "grok-4-latest",
-          "grok-3-latest"
+          "grok-4.3",
+          "grok-imagine-image-quality"
         ]
         fetch: false
       titleConvo: true
-      titleModel: "grok-4-latest"
+      titleModel: "grok-4.3"
       summarize: false
-      summaryModel: "grok-4-latest"
+      summaryModel: "grok-4.3"
       modelDisplayLabel: "Grok"
       iconURL: "https://raw.githubusercontent.com/webpug/PugChat/main/icons/xAIlogo.png"
 
