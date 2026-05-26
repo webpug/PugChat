@@ -109,9 +109,9 @@ endpoints:
           ]
         fetch: false
       titleConvo: true
-      titleModel: "deepseek-chat"
+      titleModel: "deepseek-v4-flash"
       summarize: false
-      summaryModel: "deepseek-chat"
+      summaryModel: "deepseek-v4-pro"
       modelDisplayLabel: "DeepSeek"
 
     # Preplexity
