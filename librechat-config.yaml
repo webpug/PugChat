@@ -139,7 +139,7 @@ endpoints:
       baseURL: "https://api.x.ai/v1"
       models:
         default: [
-          "grok-4.3",
+          "grok-4.5",
           "grok-imagine-image-quality"
         ]
         fetch: false
