@@ -6,6 +6,20 @@ fileStrategy: "s3"
 # Cache settings: Set to true to enable caching
 cache: true
 
+# Per-user spend guardrail (flat-fee protection).
+# Credits are denominated in provider list price: 1,000,000 credits = $1 of
+# token cost. Expensive models drain faster via per-model multipliers
+# (packages/data-schemas tx.ts tokenValues). Users are hard-stopped at 0.
+# 20,000,000 credits = $20/month of API cost per user (~4x the plan price;
+# generous for real use, fatal to abuse). Refills lazily on login/refresh.
+balance:
+  enabled: true
+  startBalance: 20000000
+  autoRefillEnabled: true
+  refillIntervalValue: 30
+  refillIntervalUnit: 'days'
+  refillAmount: 20000000
+
 # Custom interface configuration
 interface:
   endpointsMenu: true
