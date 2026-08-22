@@ -200,28 +200,8 @@ endpoints:
       modelDisplayLabel: "Grok"
       iconURL: "https://raw.githubusercontent.com/webpug/PugChat/main/icons/xAIlogo.png"
 
-    # OpenAI GPT-5.6 (Sol/Terra/Luna).
-    # GPT-5.6 is a reasoning model: OpenAI rejects function tools on
-    # /v1/chat/completions for it ("400 ... use /v1/responses or set
-    # reasoning_effort to 'none'"). LibreChat only auto-switches to the
-    # Responses API when an explicit reasoning_effort is set, so tool calls
-    # otherwise fail. Hosting these models on a dedicated endpoint that forces
-    # `useResponsesApi: true` routes every request through /v1/responses, where
-    # reasoning + function tools are supported. Points at first-party OpenAI.
-    - name: "GPT-5.6"
-      apiKey: "${OPENAI_API_KEY}"
-      baseURL: "https://api.openai.com/v1"
-      models:
-        default: [
-          "gpt-5.6-sol",
-          "gpt-5.6-luna",
-          "gpt-5.6-terra"
-        ]
-        fetch: false
-      titleConvo: true
-      titleModel: "gpt-5.6-terra"
-      modelDisplayLabel: "OpenAI"
-      iconURL: "openAI"
-      addParams:
-        useResponsesApi: true
+    # GPT-5.6 (Sol/Terra/Luna) lives on the built-in OpenAI endpoint:
+    # upstream LibreChat #14206 added the models to the OpenAI defaults and
+    # #14232 auto-routes GPT-5.6 reasoning requests to /v1/responses, so the
+    # dedicated useResponsesApi endpoint is no longer needed.
 
