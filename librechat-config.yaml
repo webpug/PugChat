@@ -194,9 +194,9 @@ endpoints:
         ]
         fetch: false
       titleConvo: true
-      titleModel: "grok-4.3"
+      titleModel: "grok-4.6"
       summarize: false
-      summaryModel: "grok-4.3"
+      summaryModel: "grok-4.6"
       modelDisplayLabel: "Grok"
       iconURL: "https://raw.githubusercontent.com/webpug/PugChat/main/icons/xAIlogo.png"
 
