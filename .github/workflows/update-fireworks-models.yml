@@ -1,0 +1,41 @@
+name: Update Fireworks trending models
+
+# Refreshes the Fireworks endpoint's model list in librechat-config.yaml from
+# the Fireworks Model Library's "Trending" sort. Weekly is frequent enough to
+# catch new releases without churning the config on every minor shuffle.
+#
+# Note: GitHub disables scheduled workflows after 60 days of repository
+# inactivity; use the manual "Run workflow" trigger if that happens.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh Fireworks model list
+        run: node scripts/update-fireworks-models.mjs
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet librechat-config.yaml; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add librechat-config.yaml
+          git commit -m "chore: refresh Fireworks trending models [skip ci]"
+          git push
