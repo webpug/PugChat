@@ -100,7 +100,7 @@ endpoints:
       baseURL: 'https://api.fireworks.ai/inference/v1'
       models:
         # Top trending serverless LLMs from https://app.fireworks.ai/models (Sort: Trending).
-        # Snapshot: 2026-10-26
+        # Snapshot: 2026-11-02
         default: [
           "accounts/fireworks/models/minimax-m3p1-flash",
           "accounts/fireworks/models/deepseek-v4p1-flash-1017",
@@ -114,6 +114,8 @@ endpoints:
           "accounts/fireworks/models/minimax-m3",
           "accounts/fireworks/models/gpt-oss-120b",
           "accounts/fireworks/models/nemotron-3-ultra-nvfp4",
+          "accounts/fireworks/models/ultramarine-1-flash-us",
+          "accounts/fireworks/models/rune",
           "accounts/fireworks/models/muse-spark-open",
           "accounts/fireworks/models/inkling"
         ]
