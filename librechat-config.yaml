@@ -100,28 +100,25 @@ endpoints:
       baseURL: 'https://api.fireworks.ai/inference/v1'
       models:
         # Top trending serverless LLMs from https://app.fireworks.ai/models (Sort: Trending).
-        # Snapshot: 2026-11-02
+        # Snapshot: 2026-11-09
         default: [
+          "accounts/fireworks/models/kimi-k3p1-pro",
           "accounts/fireworks/models/minimax-m3p1-flash",
           "accounts/fireworks/models/deepseek-v4p1-flash-1017",
           "accounts/fireworks/models/ember-1",
           "accounts/fireworks/models/deepseek-v4p1-flash",
           "accounts/fireworks/models/glm-5p3",
           "accounts/fireworks/models/glm-5p3-flash",
-          "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
           "accounts/fireworks/models/qwen3p8-max",
           "accounts/fireworks/models/kimi-k3",
           "accounts/fireworks/models/minimax-m3",
-          "accounts/fireworks/models/gpt-oss-120b",
-          "accounts/fireworks/models/nemotron-3-ultra-nvfp4",
           "accounts/fireworks/models/ultramarine-1-flash-us",
           "accounts/fireworks/models/rune",
-          "accounts/fireworks/models/muse-spark-open",
-          "accounts/fireworks/models/inkling"
+          "accounts/fireworks/models/muse-spark-open"
         ]
         fetch: false
       titleConvo: true
-      titleModel: "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b"
+      titleModel: "accounts/fireworks/models/kimi-k3p1-pro"
       summarize: false
       modelDisplayLabel: 'Fireworks'
     # FIREWORKS-ENDPOINT:END
