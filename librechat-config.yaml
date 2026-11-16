@@ -100,7 +100,7 @@ endpoints:
       baseURL: 'https://api.fireworks.ai/inference/v1'
       models:
         # Top trending serverless LLMs from https://app.fireworks.ai/models (Sort: Trending).
-        # Snapshot: 2026-11-09
+        # Snapshot: 2026-11-16
         default: [
           "accounts/fireworks/models/kimi-k3p1-pro",
           "accounts/fireworks/models/minimax-m3p1-flash",
